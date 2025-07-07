@@ -64,14 +64,10 @@ def gradient_descent(x, y, w, b, alpha, max_iters=1000):
         cost = j_wb(x, y, w, b)
         print(f"Cost: {cost}, w: {w}, b: {b}")
         
+    return w, b
     
-    a = [w,b]
-    return a
-    
+w,b = gradient_descent(house_price, house_yards, w, b, alpha)
 
-a = gradient_descent(house_price, house_yards, w, b, alpha)
-w = a[0]
-b = a[1]
 prediction_line = f_wb(house_price, w, b)
 plt.plot(house_price , prediction_line, color='red', label='Prediction Line')
 plt.show()
