@@ -12,7 +12,7 @@ plt.scatter(X[:, 0], Y, color='blue', marker='x', label='House Price vs Size')
 
 m = X.shape[0]
 
-w = np.array([1,1,1,1])
+w = np.array([0.1,1,1,1])
 b = 20
 
 
